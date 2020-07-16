@@ -1,10 +1,10 @@
 function log(String) {
 	
-	var Time = "[" + string(time.stream) + "]" 
+	var Time = "[" + string(time.stream) + "] " 
 	
 	var objectName = string_upper(object_get_name(other.object_index))
 	
-	var fullMessage = objectName + " " + Time + objectName + " " + String
+	var fullMessage = Time + objectName + " " + String
 	
 	show_debug_message(fullMessage)
 }
