@@ -1,0 +1,1 @@
+if input.debugPress on = !on

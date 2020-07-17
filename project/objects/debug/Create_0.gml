@@ -1,3 +1,5 @@
+on = false
+
 function log(String) {
 	
 	var Time = "[" + string(time.stream) + "] " 
