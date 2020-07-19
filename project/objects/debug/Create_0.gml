@@ -10,3 +10,5 @@ function log(String) {
 	
 	show_debug_message(fullMessage)
 }
+
+depth = -2

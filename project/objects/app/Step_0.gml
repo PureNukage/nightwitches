@@ -3,9 +3,14 @@ if instance_exists(player) {
 	y = player.y
 }
 
+//var Layer = layer_get_id("ground")
+//var map = layer_tilemap_get_id(Layer)
+//var tileX = layer_tile_get_x(map)
+//layer_tile_x(map,tileX-2)
+
 #region		Camera Zoom
 
-zoom_level = clamp((zoom_level + (mouse_wheel_down()-mouse_wheel_up())*0.1),0.25,1.0)
+zoom_level = clamp((zoom_level + (mouse_wheel_down()-mouse_wheel_up())*0.1),0.10,1.0)
 
 camera_set_view_pos(camera,
 		clamp( camera_get_view_x(camera), 0, room_width - camera_get_view_width(camera) ),

@@ -6,7 +6,38 @@ instance_create_layer(0,0,"Instances",input)
 instance_create_layer(0,0,"Instances",debug)
 
 
+surfaceGroundX = 0
+surfaceGround = -1
 
+function surfaceGroundCreate() {
+	surfaceGround = surface_create(room_width,room_height)
+	surface_set_target(surfaceGround)
+	var Layer = layer_get_id("ground")
+	var map = layer_tilemap_get_id(Layer)
+	draw_tilemap(map,0,0)
+	surface_reset_target()
+	layer_depth(Layer, 201)
+} 
+
+function drawSurfaceGround() {
+	if surface_exists(surfaceGround) {
+		if surfaceGroundX == 0 {
+			draw_surface(surfaceGround,0,0)	
+		} 
+		
+		else {
+			draw_surface(surfaceGround,surfaceGroundX,0)
+			var otherX = room_width + surfaceGroundX
+			draw_surface(surfaceGround,otherX,0)
+		}
+		surfaceGroundX -= 2
+		if (surfaceGroundX == room_width * -1) surfaceGroundX = 0
+	}
+	
+	else {
+		surfaceGroundCreate()
+	}
+}
 
 
 
