@@ -1,0 +1,1 @@
+wasPlayer = false

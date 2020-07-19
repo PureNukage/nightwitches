@@ -9,6 +9,8 @@ if on {
 		draw_text(xx,yy, "zoom_level: "+string(app.zoom_level)) yy += 15
 		draw_text(xx,yy, "movespeed: "+string(movespeed)) yy += 15
 		draw_text(xx,yy, "inAir: "+string(inAir)) yy += 15
+		draw_text(xx,yy, "thrust: "+string(thrust)) yy += 15
+		draw_text(xx,yy, "image_angle: "+string(image_angle)) yy += 15
 		
 	}
 }

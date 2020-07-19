@@ -103,7 +103,7 @@ function drawSurfaceGround() {
 	
 	//scale_canvas(1280,720)
 	
-	zoom_level = .65
+	zoom_level = .45
 	default_zoom_width = camera_get_view_width(camera)
 	default_zoom_height = camera_get_view_height(camera)
 
