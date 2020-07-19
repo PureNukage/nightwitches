@@ -6,6 +6,8 @@ keyRight = keyboard_check(ord("D"))
 keyPlaneUp = keyboard_check(ord("R"))
 keyPlaneDown = keyboard_check(ord("F"))
 
+keyPlaneIgnition = keyboard_check_pressed(ord("E"))
+
 debugPress = keyboard_check_pressed(vk_control)
 
 if keyUp debug.log("I am pressing W")

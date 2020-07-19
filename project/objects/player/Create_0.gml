@@ -6,6 +6,8 @@ inAir = false
 thrust = 0
 thrustMax = 100
 alive = true
+engineOn = false
+image_speed = 0
 
 
 function ascend(up, down) {
