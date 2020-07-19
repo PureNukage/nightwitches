@@ -12,7 +12,7 @@ if alive {
 }
 
 //	Move to the left
-x -= 2
+worldSpeed()
 
 //	If off screen to the left, move off screen to the right
 if x < -100 {

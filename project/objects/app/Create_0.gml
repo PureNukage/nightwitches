@@ -30,8 +30,8 @@ function drawSurfaceGround() {
 			var otherX = room_width + surfaceGroundX
 			draw_surface(surfaceGround,otherX,0)
 		}
-		surfaceGroundX -= 2
-		if (surfaceGroundX == room_width * -1) surfaceGroundX = 0
+		if instance_exists(player) surfaceGroundX -= player.movespeed
+		if (surfaceGroundX <= room_width * -1) surfaceGroundX = 0
 	}
 	
 	else {
@@ -82,7 +82,7 @@ function drawSurfaceGround() {
 		camera_set_view_pos(camera,x,y)
 		camera_set_view_size(camera,width,height)
 	
-		camera_set_view_speed(camera,200,200)
+		camera_set_view_speed(camera,940,400)
 		camera_set_view_border(camera,width,height)
 	
 		camera_set_view_target(camera,id)
@@ -103,7 +103,7 @@ function drawSurfaceGround() {
 	
 	//scale_canvas(1280,720)
 	
-	zoom_level = 1
+	zoom_level = .65
 	default_zoom_width = camera_get_view_width(camera)
 	default_zoom_height = camera_get_view_height(camera)
 
