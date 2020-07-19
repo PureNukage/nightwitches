@@ -82,7 +82,7 @@ function drawSurfaceGround() {
 		camera_set_view_pos(camera,x,y)
 		camera_set_view_size(camera,width,height)
 	
-		camera_set_view_speed(camera,940,400)
+		camera_set_view_speed(camera,200,200)
 		camera_set_view_border(camera,width,height)
 	
 		camera_set_view_target(camera,id)

@@ -1,4 +1,6 @@
 if instance_exists(player) {
+	//x = lerp(x,player.x,0.03)
+	//y = lerp(y,player.y,0.03)
 	x = player.x
 	y = player.y
 }
