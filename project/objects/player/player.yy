@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_plane",
-    "path": "sprites/s_plane/s_plane.yy",
+    "name": "s_plane_voxel",
+    "path": "sprites/s_plane_voxel/s_plane_voxel.yy",
   },
   "solid": false,
   "visible": true,

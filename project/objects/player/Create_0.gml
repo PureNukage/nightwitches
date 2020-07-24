@@ -7,6 +7,8 @@ thrust = 0
 thrustMax = 100
 alive = true
 engineOn = false
+pitch = 0
+roll = 0
 image_speed = 0
 
 
@@ -14,28 +16,26 @@ function ascend(up, down) {
 	
 	//	The speed the plane will ascend/descend	
 	var flightSpeed = 0.0035
+	var Roll = 0.004
 	
-	//	Ascending!
+	//	Ascending!a
 	if up and altitude < altitudeMax {
 		app.zoom_level += flightSpeed
 		altitude++
 		thrust++
 		if altitude >= altitudeMax altitude = altitudeMax
-		image_angle = 0 + floor(((thrust / thrustMax) * 20))
+		roll -= Roll
 	}
 	//	Descending!
 	else if down {
 		app.zoom_level -= flightSpeed
 		altitude--
 		thrust--
-		image_angle = 0 - (-1*(((thrust / thrustMax) * 20)))
+		roll += Roll
 	}
 	//	Flying level
 	else {
-		if image_angle != 0 {
-			if (image_angle < 21 and image_angle > 0) image_angle = 0 - (-1*(((thrust / thrustMax) * 20)))
-			else if (image_angle < 0) image_angle = 0 + ((thrust / thrustMax) * 20)
-		}
+
 		if thrust > 0 thrust--
 		else if thrust < 0 thrust++
 		

@@ -26,7 +26,7 @@ if alive {
 			app.zoom_level -= flightSpeed
 			altitude--
 			thrust--
-			image_angle = 0 - (-1*(((thrust / thrustMax) * 20)))	
+			//image_angle = 0 - (-1*(((thrust / thrustMax) * 20)))	
 		}
 	
 		//	I am touching the ground!
@@ -46,6 +46,16 @@ if alive {
 		//	Apply movement
 		if (hspd != 0 or vspd != 0) and engineOn {
 			var Direction = point_direction(0,0,hspd,vspd)
+			
+			var Pitch = 0.02
+			//	Going down
+			if vspd > 0 {
+				pitch += Pitch
+			}
+			//	Going up
+			else if vspd < 0 {
+				pitch -= Pitch
+			}
 
 			y += lengthdir_y(movespeed, Direction)
 			y = clamp(y, 0 + sprite_get_height(sprite_index)/2, room_height - sprite_get_height(sprite_index)/2)
@@ -84,6 +94,9 @@ if alive {
 			if movespeed > 0 movespeed -= 0.03
 			else movespeed = 0
 		}
+			
+		pitch += (keyboard_check(ord("Q")) - keyboard_check(ord("E"))) / 10
+		roll += (keyboard_check(ord("Z")) - keyboard_check(ord("C"))) / 10
 	}
 }
 //	I am ded
@@ -94,5 +107,7 @@ else {
 	scale = 1
 }
 
+roll = clamp(roll, -0.3, 0.3)
+pitch = clamp(pitch, .3, 1.4)
 
 depth = -1

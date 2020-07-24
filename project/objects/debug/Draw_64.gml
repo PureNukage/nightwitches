@@ -11,6 +11,8 @@ if on {
 		draw_text(xx,yy, "inAir: "+string(inAir)) yy += 15
 		draw_text(xx,yy, "thrust: "+string(thrust)) yy += 15
 		draw_text(xx,yy, "image_angle: "+string(image_angle)) yy += 15
+		draw_text(xx,yy, "roll: "+string(roll)) yy += 15
+		draw_text(xx,yy, "pitch: "+string(pitch)) yy += 15
 		
 	}
 }
